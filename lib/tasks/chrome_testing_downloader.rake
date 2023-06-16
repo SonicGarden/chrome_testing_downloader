@@ -7,7 +7,7 @@ namespace :chrome do
   desc 'Check Chrome For Testing version'
   task check_version: :environment do
     if ChromeTestingDownloader.latest_version != ChromeTestingDownloader.required_version
-      puts "Chrome For Testing version is old. Please run `rake chrome_testing_downloader:update_version`"
+      puts 'Chrome For Testing version is old. Please run `rake chrome_testing_downloader:update_version`'
       exit 1
     end
   end
