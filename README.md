@@ -17,12 +17,26 @@ group :test do
 end
 ```
 
+After installation, run the following command to generate the `.chrome-version` file.
+
+```
+bundle exec rake chrome:update_version
+```
+
 ## Usage
 
+In `spec/rails_helper.rb`
 ```ruby
-# SEE: https://googlechromelabs.github.io/chrome-for-testing/
-ChromeTestingDownloader.required_version = '114.0.5735.133'
+Selenium::WebDriver::Chrome.path = ChromeTestingDownloader.chrome_path
 ```
+
+## Rake Tasks
+
+The gem provides the following Rake tasks:
+
+- `chrome:download`: Downloads the required version of Chrome for Testing.
+- `chrome:check_version`: Checks if the installed version of Chrome for Testing is up-to-date.
+- `chrome:update_version`: Updates the installed version of Chrome for Testing.
 
 ## License
 
