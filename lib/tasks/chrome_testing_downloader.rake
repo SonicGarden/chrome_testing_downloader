@@ -14,6 +14,6 @@ namespace :chrome do
 
   desc 'Update Chrome For Testing version'
   task update_version: :environment do
-    File.write(ChromeTestingDownloader.version_file_path, ChromeTestingDownloader.latest_version)
+    File.write(ChromeTestingDownloader.version_file_path, "#{ChromeTestingDownloader.latest_version}\n")
   end
 end
