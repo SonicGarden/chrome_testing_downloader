@@ -12,7 +12,7 @@ Add the following line to your Gemfile and run bundle install:
 
 
 ```ruby
-group :test do
+group :development, :test do
   gem 'chrome_testing_downloader', github: 'SonicGarden/chrome_testing_downloader'
 end
 ```
