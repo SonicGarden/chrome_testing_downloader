@@ -2,6 +2,7 @@
 
 require 'fileutils'
 require 'open-uri'
+require 'rails'
 
 module ChromeTestingDownloader
   class Downloader
